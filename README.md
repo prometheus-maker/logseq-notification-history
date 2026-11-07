@@ -30,6 +30,10 @@ It reads the messages from Logseq's window, so it needs the plugin setting that 
 (`effect`). It records from the moment it loads, so the very first messages at startup are missed. Tested on
 Logseq 2.0.2 (Linux) with a database graph. It doesn't read or change your graph.
 
+## Same plugin for other apps
+
+[Obsidian](https://community.obsidian.md/plugins/notice-history), [SiYuan](https://github.com/prometheus-maker/siyuan-notification-history).
+
 ## Licence
 
 MIT. Problems and ideas: open an issue.
