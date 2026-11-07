@@ -1,0 +1,30 @@
+{
+  "name": "logseq-notification-history",
+  "version": "1.0.0",
+  "description": "Keeps every pop-up message Logseq and its plugins show, so you can read one after it disappears.",
+  "main": "dist/index.html",
+  "author": "prometheus-maker",
+  "license": "MIT",
+  "type": "module",
+  "logseq": {
+    "id": "notification-history",
+    "title": "Notification History",
+    "icon": "./icon.png",
+    "main": "./dist/index.html",
+    "effect": true
+  },
+  "scripts": {
+    "build": "node build.mjs && tsc -p .",
+    "test": "node build.mjs && tsc -p . && node --test test/"
+  },
+  "devDependencies": {
+    "@logseq/libs": "^0.0.17",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  },
+  "effect": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prometheus-maker/logseq-notification-history"
+  }
+}
