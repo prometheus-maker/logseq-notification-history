@@ -24,6 +24,7 @@ with sync_playwright() as p:
     b = p.chromium.connect_over_cdp("http://127.0.0.1:9334")
     pg = [x for c in b.contexts for x in c.pages if x.url.startswith("lsp://")][0]
     pg.set_default_timeout(15000)
+    pg.set_viewport_size({"width": 1280, "height": 860})  # some builds open a 1x1 headless window
     errs = []; pg.on("pageerror", lambda e: errs.append(str(e)))
     pg.evaluate("LSPluginCore.reload(['notification-history'])"); pg.wait_for_selector(".nh-toolbar", timeout=30000); pg.wait_for_timeout(1000)
     close_toasts(pg)
